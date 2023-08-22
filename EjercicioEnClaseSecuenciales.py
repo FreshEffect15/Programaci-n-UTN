@@ -1,14 +1,12 @@
-nombre_Dia = input("Ingrese el nombre del dia: ")
+fecha = input("Ingrese la fecha (formato: dia/mes/año): ")
 
-mes_num = int(input("Ingrese el número del mes en el que encuentra: "))
+nombre_dia = fecha.split("/")[0].lower()
 
-dia_num = int((input("Ingrese el número del día en el que se encuentra: ")))
+mes_num = int(fecha.split("/")[1])
 
-dia = nombre_Dia.lower() + "/" + str(mes_num) + "/" + str(dia_num)
+dia_num = int(fecha.split("/")[2])
 
-nombre_Dia = nombre_Dia.lower()
-
-if (nombre_Dia == "lunes" and dia_num <= 31 and mes_num <= 12):
+if (nombre_dia == "lunes" and dia_num <= 31 and mes_num <= 12):
     
     print("Dia Lunes")
 
@@ -32,7 +30,7 @@ if (nombre_Dia == "lunes" and dia_num <= 31 and mes_num <= 12):
 
 
 
-elif (nombre_Dia == "martes" and dia_num <= 31 and mes_num <= 12):
+elif (nombre_dia == "martes" and dia_num <= 31 and mes_num <= 12):
 
     print("Dia Martes")
 
@@ -54,7 +52,7 @@ elif (nombre_Dia == "martes" and dia_num <= 31 and mes_num <= 12):
 
          print("El porcentaje de aprobados fue del ", porcentaje_Aprob, "%")
 
-elif(nombre_Dia == "miércoles" or nombre_Dia == "miercoles" and dia_num <= 31 and mes_num <= 12):
+elif(nombre_dia == "miércoles" or nombre_dia == "miercoles" and dia_num <= 31 and mes_num <= 12):
 
     print("Dia Miércoles")
 
@@ -76,7 +74,7 @@ elif(nombre_Dia == "miércoles" or nombre_Dia == "miercoles" and dia_num <= 31 a
 
          print("El porcentaje de aprobados fue del ", porcentaje_Aprob, "%")
 
-elif (nombre_Dia == "jueves" and dia_num <= 31 and mes_num <= 12):
+elif (nombre_dia == "jueves" and dia_num <= 31 and mes_num <= 12):
 
     print("Dia Jueves")
 
@@ -90,7 +88,7 @@ elif (nombre_Dia == "jueves" and dia_num <= 31 and mes_num <= 12):
     else:
           print("Faltó la mayoría")
 
-elif(nombre_Dia == "viernes" and dia_num <= 31 and mes_num <= 12):
+elif(nombre_dia == "viernes" and dia_num <= 31 and mes_num <= 12):
 
     print("Dia Viernes")
 
@@ -108,13 +106,13 @@ elif(nombre_Dia == "viernes" and dia_num <= 31 and mes_num <= 12):
          print("El ingreso total: $", total )
 
 
-elif (nombre_Dia == "sábado" or nombre_Dia == "sabado" and dia_num <= 31 and mes_num <= 12):
+elif (nombre_dia == "sábado" or nombre_dia == "sabado" and dia_num <= 31 and mes_num <= 12):
 
     print("Dia Sábado")
 
     print("No es un día escolar")
 
-elif(nombre_Dia == "domingo" and dia_num <= 31 and mes_num <= 12):
+elif(nombre_dia == "domingo" and dia_num <= 31 and mes_num <= 12):
 
     print("Dia Domingo")
 
@@ -123,4 +121,3 @@ elif(nombre_Dia == "domingo" and dia_num <= 31 and mes_num <= 12):
 else:
 
     print("Error, por favor ingrese una fecha válida")
-
