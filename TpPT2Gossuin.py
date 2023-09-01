@@ -18,7 +18,7 @@ cateto1 = int(input("Ingrese el primer cateto del triángulo "))
 
 cateto2 = int(input("Ingrese el segundo cateto del triángulo "))
 
-hipotenusa = cateto1**2 + cateto2**2
+hipotenusa = math.sqrt(cateto1**2 + cateto2**2)
 
 print("La hipotenusa es: ", hipotenusa)
 
@@ -216,19 +216,17 @@ print(dia,"/",mes,"/",anio )
 
 #Ejercicio 20
 
-dia = int(input("Ingrese su dia de nacimiento: "))
-mes = int(input("Ingrese el número de su mes de nacimiento: "))
-anio = int(input("Ingrese su año de nacimiento: "))
+fecha = input("Ingrese su dia de nacimiento en formato DD/MM/AAA: ")
 
-dia = str(dia)
+dia = fecha.split("/")[0]
 
-mes = str(mes)
+mes = fecha.split("/")[1]
 
-anio = str(anio)
+anio = fecha.split("/")[2]
 
 cumple = dia + "/" + mes + "/" + anio
 
-print(cumple)
+print("Su día de nacimiento es: ", cumple)
 
 #Ejercicio 21
 
